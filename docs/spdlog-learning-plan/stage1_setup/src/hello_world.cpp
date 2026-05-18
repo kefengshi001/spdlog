@@ -10,6 +10,8 @@ int main() {
     spdlog::warn("This is a warning message");
     spdlog::error("This is an error message");
 
+    double pi = 3.14159;
+    spdlog::info("The value of pi is approximately {:.2f}", pi);
     // 使用格式化输出
     spdlog::info("spdlog version: {}.{}", 1, 17);
 

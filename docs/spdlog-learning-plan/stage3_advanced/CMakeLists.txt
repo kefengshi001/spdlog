@@ -4,14 +4,7 @@ project(spdlog_stage3_advanced CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Fetch spdlog
-include(FetchContent)
-FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG v1.17.0
-)
-FetchContent_MakeAvailable(spdlog)
+find_package(spdlog REQUIRED)
 
 # Create logs output directory
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/logs)
